@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             p.setSpacingAfter(5);
             doc.add(p);
             doc.add(new LineSeparator());
+
             //close the document
             doc.close();
             Toast.makeText(this, "Pdf path : " + Environment.getExternalStorageDirectory() + "/mypdf.pdf", Toast.LENGTH_SHORT).show();
