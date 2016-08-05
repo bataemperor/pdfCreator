@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         //create document object
         Document doc = new Document();
         //output file path
-        String outpath = Environment.getExternalStorageDirectory() + "/mypdf.pdf";
+        String outpath = Environment.getExternalStorageDirectory() + "/CV/mypdf.pdf";
         try {
             //create pdf writer instance
             PdfWriter.getInstance(doc, new FileOutputStream(outpath));
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
             //close the document
             doc.close();
-            Toast.makeText(this, "Pdf path : " + Environment.getExternalStorageDirectory() + "/mypdf.pdf", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Pdf path : " + Environment.getExternalStorageDirectory() + "/CV/mypdf.pdf", Toast.LENGTH_SHORT).show();
         } catch (FileNotFoundException | DocumentException | MalformedURLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void send(View view) {
-        String filename = "mypdf.pdf";
+        String filename = "CV/mypdf.pdf";
         File filelocation = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), filename);
         Uri path = Uri.fromFile(filelocation);
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
