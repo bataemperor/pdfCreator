@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 1);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 1);
     }
 
     @Override
